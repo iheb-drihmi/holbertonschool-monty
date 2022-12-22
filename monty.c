@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	char buff[1024];
+	char op[1024];
 	FILE *fs;
 	char *line = NULL, *token = NULL;
 	stack_t *stack = NULL;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (fgets(op, 1024, fp) != NULL)
+	while (fgets(op, 1024, fs) != NULL)
 	{
 		line_number++;
 		line = strtok(op, "\n");
