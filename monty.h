@@ -41,10 +41,10 @@ int sum_tokens(char *, char *);
 size_t print(const stack_t *stack);
 stack_t *add_end(stack_t **stack, const int n);
 stack_t *add_begin(stack_t **satck, const int n);
-void swap_previous(stack_t *head);
-void add_previous(stack_t **head);
-void print_previous(const stack_t *h);
-void pop_previous(stack_t **head);
+void swap_previous(stack_t *ptr);
+void add_previous(stack_t **ptr);
+void print_previous(const stack_t *kao);
+void pop_previous(stack_t **ptr);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
@@ -52,9 +52,9 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int n);
-void (*get(char *s, unsigned int))(stack_t **, unsigned int);
+void (*get(char *b, unsigned int))(stack_t **, unsigned int);
 
 int free_list(char **list);
-void free_dlist(stack_t *head);
+void free_dlist(stack_t *ptr);
 
 #endif
