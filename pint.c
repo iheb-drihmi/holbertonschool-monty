@@ -10,7 +10,7 @@ void pint(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL)
 
 	{
-		ERROR_MANAGE = -1;
+		
 		printf("L%d: can't pint, stack empty\n", line_number);
 		return;
 	}
