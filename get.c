@@ -11,13 +11,13 @@ void (*get(char *b, unsigned int n))(stack_t **, unsigned int)
 	int i = 0;
 
 	instruction_t opcodes[] = {
-		{"push", push_opcode},
-		{"pall", pall_opcode},
-		{"pint", pint_opcode},
-		{"pop", pop_opcode},
-		{"swap", swap_opcode},
-		{"add", add_opcode},
-		{"nop", nop_opcode},
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
