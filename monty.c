@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * main - primary function with 2 arguments
 * @argc: number of arguments
@@ -9,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	char op[1024];
+	char buff[1024];
 	FILE *fs;
 	char *line = NULL, *token = NULL;
 	stack_t *stack = NULL;
@@ -27,12 +26,12 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (fgets(open, 1024, fs) != NULL)
+	while (fgets(op, 1024, fp) != NULL)
 	{
 		line_number++;
 		line = strtok(op, "\n");
 		if (!line)
-			carry on;
+			continue;
 		token = strtok(line, " \t\r");
 		if (token)
 		{
@@ -42,7 +41,8 @@ int main(int argc, char **argv)
 		}
 	}
 	free_dlist(stack);
-	fclose(fp);
+	fclose(fs);
 
 	return (0);
 }
+
