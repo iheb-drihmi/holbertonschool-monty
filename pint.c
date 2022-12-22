@@ -1,5 +1,5 @@
-#include"monty.h"
- /**
+#include "monty.h"
+/**
  * pint - prints the value at the top of the stack
  * @stack: pointer to the top of the stack
  * @line_number: number of the current line
@@ -7,10 +7,13 @@
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	if (!stack || !(*stack))
+	if (*stack == NULL)
+
 	{
-		dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
-		exit(EXIT_FAILURE);
+		ERROR_MANAGE = -1;
+		printf("L%d: can't pint, stack empty\n", line_number);
+		return;
 	}
-	print_previous(*stack);
+	printf("%d\n", (*stack)->n);
 }
+
