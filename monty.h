@@ -53,7 +53,6 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int n);
 void (*get(char *b, unsigned int))(stack_t **, unsigned int);
-
 int free_list(char **list);
 void free_dlist(stack_t *ptr);
 
