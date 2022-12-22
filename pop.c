@@ -6,10 +6,19 @@
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	if (!stack || !(*stack))
+	stack_t *koa = NULL;
+
+	if (*stack == NULL)
 	{
-		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", line_number);
-		exit(EXIT_FAILURE);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		
+		return;
 	}
-	pop_previous(stack);
+	koa = *stack;
+	*stack = koa->next;
+	if (koa->next)
+	{
+		koa->next->prev = NULL;
+	}
+	free(koa);
 }
