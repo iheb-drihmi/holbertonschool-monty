@@ -5,9 +5,12 @@
  *@line_number: unused
  *Return: void
  */
-void nop(stack_t **stack, unsigned int n)
+void nop(stack_t **stack, unsigned int line_number)
 {
-	(void)stack;
-	(void)n;
+	(void) line_number;
+	(void) stack;
 }
+
+
+
 
